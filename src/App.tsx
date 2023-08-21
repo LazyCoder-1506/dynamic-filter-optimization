@@ -1,10 +1,11 @@
 import './App.css';
+import TableComponent from './components/TableComponent/TableComponent';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-red-500 font-bold italic">Helllo world</h1>
-    </div>
+    <>
+      <TableComponent />
+    </>
   );
 }
 
