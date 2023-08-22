@@ -1,4 +1,6 @@
- export const data = [
+import { DataRow } from "../components/TableComponent/TableComponent";
+
+ export const data: DataRow[] = [
   {
     value: 700567,
     mod_350: 112,

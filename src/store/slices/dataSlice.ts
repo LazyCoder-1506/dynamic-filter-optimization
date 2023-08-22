@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { data } from "../assets/output";
-import { DataRow } from "../components/TableComponent/TableComponent";
+import { data } from "../../assets/output";
+import { DataRow } from "../../components/TableComponent/TableComponent";
 
 const initialState: { data: DataRow[] } = {
   data: data
