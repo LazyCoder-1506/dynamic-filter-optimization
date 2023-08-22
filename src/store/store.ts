@@ -7,9 +7,9 @@ import mod20002Reducer from './slices/mod20002Slice';
 const store = configureStore({
   reducer: {
     data: dataReducer,
-    mod350: mod350Reducer,
-    mod8000: mod8000Reducer,
-    mod20002: mod20002Reducer,
+    mod_350: mod350Reducer,
+    mod_8000: mod8000Reducer,
+    mod_20002: mod20002Reducer,
   }
 });
 
