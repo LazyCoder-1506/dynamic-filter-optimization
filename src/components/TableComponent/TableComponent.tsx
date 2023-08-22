@@ -1,7 +1,8 @@
 import DataTable, { TableColumn } from "react-data-table-component";
-import { data } from "../../assets/output";
+import { useAppSelector } from "../../store/hooks";
+// import { data } from "../../assets/output";
 
-interface DataRow {
+export interface DataRow {
   value: number,
   mod_350: number,
   mod_8000: number,
@@ -9,6 +10,7 @@ interface DataRow {
 };
 
 const TableComponent = () => {
+  const data = useAppSelector(state => state.data.data)
   
   const columns: TableColumn<DataRow>[] = [
     {
