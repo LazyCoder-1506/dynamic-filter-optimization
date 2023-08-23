@@ -4,9 +4,9 @@ import { Option } from "../../utils/types";
 import { getAllFilterOptions, getSelectedFilterOptions, getSelectedNumbersFromSelectedOptions } from "../../utils/filterOptions";
 
 interface FilterProps {
-  values: number[],
-  selectedValues: number[],
-  changeHandler: (selectedValues: number[]) => void
+  values: string[],
+  selectedValues: string[],
+  changeHandler: (selectedValues: string[]) => void
 }
 
 const FilterComponent = ({ values, selectedValues, changeHandler }: FilterProps) => {

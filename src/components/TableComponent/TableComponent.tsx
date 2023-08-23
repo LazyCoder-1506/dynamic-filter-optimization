@@ -8,16 +8,16 @@ const TableComponent = () => {
   const columns: TableColumn<DataRow>[] = [
     {
       name: 'Value',
-      selector: row => row.value,
+      selector: row => row.number,
     }, {
       name: 'Mod 350',
-      selector: row => row.mod_350,
+      selector: row => row.mod350,
     }, {
       name: 'Mod 8000',
-      selector: row => row.mod_8000,
+      selector: row => row.mod8000,
     }, {
       name: 'Mod 20002',
-      selector: row => row.mod_20002,
+      selector: row => row.mod20002,
     }
   ]
 

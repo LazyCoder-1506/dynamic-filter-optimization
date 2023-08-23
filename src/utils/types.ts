@@ -1,11 +1,11 @@
 export interface DataRow {
-  value: number,
-  mod_350: number,
-  mod_8000: number,
-  mod_20002: number
+  number: string,
+  mod350: string,
+  mod8000: string,
+  mod20002: string
 };
 
 export interface Option {
-  value: number,
-  label: number
+  value: string,
+  label: string
 };
