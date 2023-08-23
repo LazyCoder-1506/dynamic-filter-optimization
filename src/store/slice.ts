@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { data } from "../assets/output";
 import { DataRow } from "../utils/types";
-import { filterData, updateMod20002Filters, updateMod350Filters, updateMod8000Filters } from "../utils/sliceUtils";
+import { filterData, updateMod20002Filters, updateMod350Filters, updateMod8000Filters } from "../utils/dataUtils";
 
 interface InitialState {
   data: DataRow[],

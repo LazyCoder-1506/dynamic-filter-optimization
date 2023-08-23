@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Select from "react-select";
 import { Option } from "../../utils/types";
-import { getAllFilterOptions, getSelectedFilterOptions, getSelectedNumbersFromSelectedOptions } from "../../utils/filterOptions";
+import { getAllFilterOptions, getSelectedFilterOptions, getSelectedNumbersFromSelectedOptions } from "../../utils/filterUtils";
 import { FilterProps } from "./FilterComponent.types";
 
 const FilterComponent = ({ values, selectedValues, changeHandler, placeholderText }: FilterProps) => {
