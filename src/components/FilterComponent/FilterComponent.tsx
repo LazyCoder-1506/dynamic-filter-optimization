@@ -2,14 +2,9 @@ import { useState } from "react";
 import Select from "react-select";
 import { Option } from "../../utils/types";
 import { getAllFilterOptions, getSelectedFilterOptions, getSelectedNumbersFromSelectedOptions } from "../../utils/filterOptions";
+import { FilterProps } from "./FilterComponent.types";
 
-interface FilterProps {
-  values: string[],
-  selectedValues: string[],
-  changeHandler: (selectedValues: string[]) => void
-}
-
-const FilterComponent = ({ values, selectedValues, changeHandler }: FilterProps) => {
+const FilterComponent = ({ values, selectedValues, changeHandler, placeholderText }: FilterProps) => {
   const [selectedOptions, setSelectedOptions] = useState<readonly Option[]>(getSelectedFilterOptions(selectedValues))
 
   const handleSelectChange = (newSelectedOptions: readonly Option[]): void => {
@@ -24,6 +19,7 @@ const FilterComponent = ({ values, selectedValues, changeHandler }: FilterProps)
         options={getAllFilterOptions(values)}
         value={selectedOptions}
         onChange={handleSelectChange}
+        placeholder={placeholderText}
       />
     </>
   );
