@@ -1,4 +1,4 @@
-import { DataRow } from "../components/TableComponent/TableComponent";
+import { DataRow } from "../utils/types";
 
  export const data: DataRow[] = [
   {

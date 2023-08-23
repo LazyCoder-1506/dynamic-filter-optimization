@@ -1,40 +1,28 @@
 import { useState } from "react";
 import Select from "react-select";
+import { Option } from "../../utils/types";
+import { getAllFilterOptions, getSelectedFilterOptions, getSelectedNumbersFromSelectedOptions } from "../../utils/filterOptions";
 
-interface Option {
-  value: number,
-  label: number
-};
+interface FilterProps {
+  values: number[],
+  selectedValues: number[],
+  changeHandler: (selectedValues: number[]) => void
+}
 
-const options: readonly Option[] = [
-  {
-    value: 0,
-    label: 0
-  }, {
-    value: 1,
-    label: 1
-  }, {
-    value: 2,
-    label: 2
-  }, {
-    value: 3,
-    label: 3
-  }
-];
+const FilterComponent = ({ values, selectedValues, changeHandler }: FilterProps) => {
+  const [selectedOptions, setSelectedOptions] = useState<readonly Option[]>(getSelectedFilterOptions(selectedValues))
 
-const FilterComponent = () => {
-  const [selectedValues, setSelectedValues] = useState<readonly Option[]>([])
-
-  const handleSelectChange = (selectedOptions: readonly Option[]): void => {
-    setSelectedValues(selectedOptions);
+  const handleSelectChange = (newSelectedOptions: readonly Option[]): void => {
+    setSelectedOptions(newSelectedOptions);
+    changeHandler(getSelectedNumbersFromSelectedOptions(newSelectedOptions as Option[]))
   }
 
   return (
     <>
       <Select
         isMulti
-        options={options}
-        value={selectedValues}
+        options={getAllFilterOptions(values)}
+        value={selectedOptions}
         onChange={handleSelectChange}
       />
     </>
